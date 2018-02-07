@@ -23,19 +23,19 @@
   </property>
   <property>
     <name>mapreduce.map.memory.mb</name>
-    <value>1024</value>
+    <value>512</value>
   </property>
   <property>
     <name>mapreduce.map.java.opts</name>
-    <value>-Xmx1024M</value>
+    <value>-Xmx512M</value>
   </property>
   <property>
     <name>mapreduce.reduce.memory.mb</name>
-    <value>1024</value>
+    <value>512</value>
   </property>
   <property>
     <name>mapreduce.reduce.java.opts</name>
-    <value>-Xmx1024M</value>
+    <value>-Xmx512M</value>
   </property>
   <property>
     <name>mapreduce.task.io.sort.mb</name>
@@ -52,7 +52,6 @@
   <property>
     <name>mapreduce.jobhistory.address</name>
     <value>bomc107:10020</value>
-    <description>JobHistoryServer的URI</description>
   </property>
   <property>
     <name>mapreduce.jobhistory.webapp.address</name>

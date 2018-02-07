@@ -36,11 +36,11 @@
   </property>
   <property>
     <name>yarn.scheduler.minimum-allocation-mb</name>
-    <value>1024</value>
+    <value>512</value>
   </property>
   <property>
     <name>yarn.scheduler.maximum-allocation-mb</name>
-    <value>2048</value>
+    <value>1024</value>
   </property>
   <property>
     <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
@@ -77,7 +77,10 @@
   </property>
   <property>
     <name>yarn.nodemanager.resource.cpu-vcores</name>
-    <value>2</value>
+    <value>1</value>
   </property>  
-
+  <property>
+	<name>yarn.nodemanager.vmem-pmem-ratio</name>
+	<value>2.5</value>
+  </property>
 </configuration>

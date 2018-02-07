@@ -3,24 +3,24 @@
 <allocations>
 
   <queue name="root">
-    <minResources>1024 mb,2 vcores</minResources>
-    <maxResources>2048 mb,2 vcores</maxResources>
+    <minResources>2048 mb,1 vcores</minResources>
+    <maxResources>4096 mb,1 vcores</maxResources>
     <maxRunningApps>100</maxRunningApps>
     <weight>1.0</weight>
     <schedulingMode>fair</schedulingMode>
     <aclSubmitApps> </aclSubmitApps>
     <aclAdministerApps> </aclAdministerApps>
     <queue name="default">
-      <minResources>1024 mb,2 vcores</minResources>
-      <maxResources>2048 mb,2 vcores</maxResources>
+      <minResources>2048 mb,1 vcores</minResources>
+      <maxResources>4096 mb,1 vcores</maxResources>
       <maxRunningApps>100</maxRunningApps>
       <schedulingMode>fair</schedulingMode>
       <weight>1.0</weight>
       <aclSubmitApps>*</aclSubmitApps>
     </queue>
     <queue name="hadoop">
-      <minResources>1024 mb,2 vcores</minResources>
-      <maxResources>2048 mb,2 vcores</maxResources>
+      <minResources>2048 mb,1 vcores</minResources>
+      <maxResources>4096 mb,1 vcores</maxResources>
       <maxRunningApps>100</maxRunningApps>
       <schedulingMode>fair</schedulingMode>
       <weight>1.0</weight>

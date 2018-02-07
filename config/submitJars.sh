@@ -30,9 +30,33 @@
 # 2. yarn application -kill[status|list] application_1517193589029_0001
 ############################################################################################
 
+#$ ./bin/spark-submit --class org.apache.spark.examples.SparkPi \
+#    --master yarn \
+#    --deploy-mode cluster \
+#    --driver-memory 4g \
+#    --executor-memory 2g \
+#    --executor-cores 1 \
+#    --queue thequeue \
+#    lib/spark-examples*.jar \
+#    10
+
+
 ./spark-submit --master spark://172.18.254.106:7077 \
                --deploy-mode cluster \
 			   --class com.boco.bomc.spark.App \
 			   --name JavaDirectKafkaWordCount \
 			   hdfs://172.18.254.106:9000/spark/jars/spark-example-0.0.1.jar \
 			   172.18.254.105:29092,172.18.254.106:29092,172.18.254.107:29092 spark-topic
+			   
+			   
+./spark-submit --class com.boco.bomc.spark.App \
+               --master yarn \
+			   --deploy-mode cluster \
+			   --driver-memory 512mb \
+			   --executor-memory 512mb \
+			   --executor-cores 1 \
+			   --queue default \
+			   hdfs://172.18.254.106:9000/spark/jars/spark-example-0.0.1.jar \
+			   172.18.254.105:29092,172.18.254.106:29092,172.18.254.107:29092 spark-topic
+			   
+			   
