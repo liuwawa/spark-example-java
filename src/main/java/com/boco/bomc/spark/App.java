@@ -53,7 +53,7 @@ public class App {
 		kafkaParams.put("value.deserializer", StringDeserializer.class);
 		kafkaParams.put("key.deserializer", StringDeserializer.class);
 		kafkaParams.put("group.id", groupId);
-
+		
 		// Create direct kafka stream with brokers and topics
 		JavaInputDStream<ConsumerRecord<String, String>> messages = KafkaUtils.createDirectStream(jssc,
 				LocationStrategies.PreferConsistent(), ConsumerStrategies.Subscribe(topicsSet, kafkaParams));
