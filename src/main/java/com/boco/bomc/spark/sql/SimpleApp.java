@@ -12,6 +12,7 @@ import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import org.apache.spark.api.java.function.FilterFunction;
 import org.apache.spark.api.java.function.Function;
 import org.apache.spark.api.java.function.Function2;
 import org.apache.spark.api.java.function.MapFunction;
@@ -886,8 +887,21 @@ public class SimpleApp {
 	    SparkSession spark = SparkSession.builder().appName("Simple Application").getOrCreate();
 	    Dataset<String> logData = spark.read().textFile(logFile).cache();
 
-	    long numAs = logData.filter(s -> s.contains("a")).count();
-	    long numBs = logData.filter(s -> s.contains("b")).count();
+	    FilterFunction<String> funcA = new FilterFunction<String>(){
+			@Override
+			public boolean call(String value) {
+				return value.contains("a");
+			}
+		};
+
+		FilterFunction<String> funcB = new FilterFunction<String>(){
+			@Override
+			public boolean call(String value) {
+				return value.contains("b");
+			}
+		};
+	    long numAs = logData.filter(funcA).count();
+	    long numBs = logData.filter(funcB).count();
 
 	    System.out.println("Lines with a: " + numAs + ", lines with b: " + numBs);
 
