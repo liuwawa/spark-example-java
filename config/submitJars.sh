@@ -59,4 +59,5 @@
 			   hdfs://172.18.254.106:9000/spark/jars/spark-example-0.0.1.jar \
 			   172.18.254.105:29092,172.18.254.106:29092,172.18.254.107:29092 spark-topic
 			   
-			   
+#Spark SQL
+#./spark-submit --class com.boco.bomc.spark.cases.CapeOne --master spark://172.18.254.106:7077 --deploy-mode cluster --driver-memory 1g --executor-memory 1g --executor-cores 1 hdfs://172.18.254.106:9000/spark/jars/spark-example-0.0.1.jar hdfs://172.18.254.106:9000/spark/person-data-sample.txt
