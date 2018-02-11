@@ -65,7 +65,7 @@ public class CapeTwo {
         //Calculate the max,min,avg prices for the orders that are producted by user with ID 10
         Dataset<Row> dsRow = spark.sql("SELECT max(o.prodPrice) as maxPrice,min(o.prodPrice) as minPrice,avg(o.prodPrice) as avgPrice,u.uid FROM order o,user u where u.uid = 10 and u.uid = o.uid group by u.uid");
         System.out.println("Order statistic result for user with ID 10:");
-        Row[] rows = dsRow.collect();
+        Row[] rows = (Row[]) dsRow.collect();
         for(Row row : rows) {
             System.out.println("Minimum Price=" + row.getAs("minPrice") + ";Maximum Price=" + row.getAs("maxPrice") + ";Average Price=" + row.getAs("avgPrice") );
         }

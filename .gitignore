@@ -83,13 +83,15 @@ tmp/
 
 ## Package files
 *.jar
+.classpath
+.project
 
 ## Virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
 # Maven
 target/
-target/classes/
+classes/
 log/
 
 ## Maven release plugin
