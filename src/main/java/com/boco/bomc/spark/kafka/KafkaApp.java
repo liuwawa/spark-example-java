@@ -1,4 +1,4 @@
-package com.boco.bomc.spark.structured.streaming;
+package com.boco.bomc.spark.kafka;
 
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
