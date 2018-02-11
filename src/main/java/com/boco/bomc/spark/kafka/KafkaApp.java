@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package com.boco.bomc.spark.kafka;
+=======
+package com.boco.bomc.spark.structured.streaming;
+>>>>>>> branch 'master' of https://github.com/ShefronYudy/spark-example-java.git
 
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
