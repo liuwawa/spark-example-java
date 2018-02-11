@@ -26,7 +26,7 @@ public class HiveJdbcApp {
                 .option("dbtable", "t_standard_log")
                 .option("user", "hduser")
                 .option("password", "hadoop")
-                //.option("driver", "org.apache.hadoop.hive.jdbc.HiveDriver")
+                .option("driver", "org.apache.hive.jdbc.HiveDriver")
                 .load();
 
         System.out.println("able to connect------------------");
