@@ -1,4 +1,4 @@
-package com.boco.bomc.spark.kafka;
+package com.boco.bomc.spark.sql;
 
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;

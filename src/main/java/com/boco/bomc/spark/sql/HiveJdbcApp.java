@@ -1,4 +1,4 @@
-package com.boco.bomc.spark.jdbc;
+package com.boco.bomc.spark.sql;
 
 import java.util.List;
 

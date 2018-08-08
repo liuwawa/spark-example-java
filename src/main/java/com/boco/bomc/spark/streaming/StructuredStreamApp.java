@@ -1,4 +1,4 @@
-package com.boco.bomc.spark.structured.streaming;
+package com.boco.bomc.spark.streaming;
 
 import java.util.Arrays;
 
