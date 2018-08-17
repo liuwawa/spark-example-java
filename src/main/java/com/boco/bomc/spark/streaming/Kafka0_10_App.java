@@ -36,7 +36,7 @@ public class Kafka0_10_App {
 	private static void testKafkaConsumer() {
 		SparkConf _sparkConf = new SparkConf();
 		
-		JavaStreamingContext jssc = new JavaStreamingContext(_sparkConf, Durations.seconds(30));
+		JavaStreamingContext jssc = new JavaStreamingContext(_sparkConf, Durations.seconds(10));
 		List<String> topics = Arrays.asList("topicA", "topicB");
 		String brokers = "localhost:9092,anotherhost:9092";
 		
@@ -58,7 +58,6 @@ public class Kafka0_10_App {
                         LocationStrategies.PreferConsistent(),
                         ConsumerStrategies.<String, String> Subscribe(topics,
                                 kafkaParams, offsets));
-		
 		
 		 JavaPairDStream<String, String>  input = stream.mapToPair(new PairFunction<ConsumerRecord<String, String>, String, String>() {
 			private static final long serialVersionUID = 1L;
