@@ -40,19 +40,16 @@
 		    <version>${spark.version}</version>
 		    <scope>provided</scope>
 		</dependency>
-		<!-- 
 		<dependency>
 		    <groupId>org.apache.spark</groupId>
 		    <artifactId>spark-mllib_${scala.version}</artifactId>
 		    <version>${spark.version}</version>
 		</dependency>
-
 		<dependency>
 		    <groupId>org.apache.spark</groupId>
 		    <artifactId>spark-graphx_${scala.version}</artifactId>
 		    <version>${spark.version}</version>
 		</dependency>
-		 -->
 		<dependency>
 		    <groupId>org.apache.spark</groupId>
 		    <artifactId>spark-hive_${scala.version}</artifactId>
@@ -165,13 +162,13 @@
 	</build>
 	<repositories>
 		<repository>
+			<id>SparkPackagesRepo</id>
+			<url>http://dl.bintray.com/spark-packages/maven</url>
+		</repository>	
+		<repository>
             <id>boco-nexus-public</id>
             <name>Team Nexus Repository</name>
             <url>http://111.204.35.232/nexus/content/groups/public</url>
         </repository>
-		<repository>
-			<id>SparkPackagesRepo</id>
-			<url>http://dl.bintray.com/spark-packages/maven</url>
-		</repository>
 	</repositories>
 </project>
